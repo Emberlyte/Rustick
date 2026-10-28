@@ -1,0 +1,13 @@
+[package]
+name = "Rustick"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rusqlite = { version = "0.41.0", features = ["bundled"] }
+teloxide = { version = "0.17.0", default-features = false, features = ["rustls", "macros", "ctrlc_handler"] }
+tokio = { version = "1.54.1", features = ["full"] }
+
+[profile.release]
+strip = true
+lto = true

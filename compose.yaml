@@ -1,0 +1,11 @@
+services:
+  rustick:
+    build: .
+    container_name: rustick
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - rustick-data:/data
+
+volumes:
+  rustick-data:
